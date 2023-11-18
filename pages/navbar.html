@@ -5,23 +5,36 @@
       $(window).scroll(function () {
         if ($(window).scrollTop() > 50) {
           navbar.removeClass("bg-transparent");
+          $(".navbar-toggler").css({
+            'color' : '#0c1938'
+          });
         } else {
           navbar.addClass("bg-transparent");
+          $(".navbar-toggler").css({
+            'color' : '#091125'
+          });
         }
+        
+        $('.navbar-toggler').click(function() {
+          navbar.removeClass('bg-transparent');
+        });
+
       });
+
+      
+
     });
   </script>
   <nav
     class="navbar navbar-expand-lg fixed-top"
-    aria-label="Eighth navbar example"
   >
     <div class="container">
       <a class="navbar-brand fw-bold" href="#"> Janny Eka Prayogo </a>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler  custom-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarsExample07"
+        data-bs-target="#navbar"
         aria-controls="navbarsExample07"
         aria-expanded="false"
         aria-label="Toggle navigation"
