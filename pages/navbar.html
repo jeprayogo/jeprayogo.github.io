@@ -1,0 +1,67 @@
+<script>
+    $(document).ready(function () {
+      const navbar = $(".navbar");
+
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 50) {
+          navbar.removeClass("bg-transparent");
+        } else {
+          navbar.addClass("bg-transparent");
+        }
+      });
+    });
+  </script>
+  <nav
+    class="navbar navbar-expand-lg fixed-top"
+    aria-label="Eighth navbar example"
+  >
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"> Janny Eka Prayogo </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarsExample07"
+        aria-controls="navbarsExample07"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item fwd">
+            <a class="nav-link" aria-current="page" href="#" data-scroll-to="greeting">Home</a>
+          </li>
+          <li class="nav-item fwd">
+            <a class="nav-link" aria-current="page" href="#" data-scroll-to="about">About</a>
+          </li>
+          <li class="nav-item fwd">
+            <a class="nav-link" aria-current="page" href="#" data-scroll-to="skill">Skills</a>
+          </li>
+          <li class="nav-item fwd">
+            <a class="nav-link" aria-current="page" href="#" data-scroll-to="porto">Portofolio</a>
+          </li>
+          <li class="nav-item fwd">
+            <a class="nav-link" aria-current="page" href="#" data-scroll-to="contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $('a[data-scroll-to]').on('click', function (event) { 
+          event.preventDefault();
+          const targetId = $(this).data("scroll-to");
+          const targetSection = $(".container#" + targetId);
+
+          if (targetSection.length) {
+            $("html, body").animate({
+              scrollTop: targetSection.offset().top,
+            }, 500);
+          }
+         });
+      });
+    </script>
+  </nav>

@@ -75,6 +75,10 @@ body {
   color: #0044ff;
 }
 
+.nav-link.active {
+  color: #0044ff;
+}
+
 .navbar-nav .nav-item {
   width: 100%;
   position: relative;
@@ -89,6 +93,7 @@ body {
   position: absolute;
   display: block;
   border: 0px solid transparent;
+  color: #FFF;
   width: 0%;
   height: 0%;
   transition: all 0.3s ease;
@@ -264,10 +269,6 @@ body {
   background-color: #0044ff;
 }
 
-.img-porto {
-  width: 400px;
-}
-
 #porto li button{
   text-transform: uppercase;
 }
@@ -308,4 +309,36 @@ body {
 
 #contact-form .btn-blue {
   width: 25%;
+}
+
+
+.card {
+  width: 50rem;
+}
+
+.card-bg-dark-blue {
+  background-color: #11214a;
+  color: #fff;
+  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+  border: 3px solid #031340;
+}
+
+
+.btn-second {
+  background-color: #dea601; /* Your custom background color */
+  color: #FFFFFF; /* Your custom text color */
+  font-size: 16px;
+}
+
+.btn-second:hover {
+  background-color: #926e01; /* Change color on hover */
+}
+
+.porto-img {
+  transition: transform 0.3s ease;
+}
+
+.porto-img:hover {
+  transform: scale(1.2);
+  z-index: 1000;
 }
