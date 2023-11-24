@@ -7,7 +7,7 @@
             "description" : "The Company Profile Website of PT Harapan Mulia Perdana is a digital platform that contains detailed information about the company, services, and products of PT Harapan Mulia Perdana. The company operates in the field of agricultural industry commodities for export.",
             "category" : "Web Development",
             "url" : "https://harapanmuliaperdana.com",
-            "img" : "img/hmp-porto.png"
+            "img" : "../src/img/hmp-porto.png"
         },
         {
             "portoId" : "porto002",
@@ -16,7 +16,7 @@
             "description" : "The Company Profile Website of PT CSM Corporata (Indorent) is a digital platform that contains detailed information about the company, services, and products of PT CSM Corporatama (Indorent)",
             "category" : "UI/UX Design",
             "url" : "https://indorent.co.id",
-            "img" : "img/indorent-porto.png"
+            "img" : "../src/img/indorent-porto.png"
         },
         {
             "portoId" : "porto003",
@@ -25,7 +25,7 @@
             "description" : "The web application 'Unicorn Indorent' is a digital platform for booking intercity bus tickets between Jakarta, Yogyakarta, Solo, and vice versa, owned by Unicorn Indorent and based on a web app. The company operates in the public transportation sector, providing services for intercity buses and tourist buses",
             "category" : "UI/UX Design",
             "url" : "https://unicorn.indorent.co.id",
-            "img" : "img/unicornweb-porto.png"
+            "img" : "../src/img/unicornweb-porto.png"
         },
         {
             "portoId" : "porto004",
@@ -34,7 +34,7 @@
             "description" : "The Mobile application 'Unicorn Indorent' is a digital platform for booking intercity bus tickets between Jakarta, Yogyakarta, Solo, and vice versa, owned by Unicorn Indorent and based on a mobile app. The company operates in the public transportation sector, providing services for intercity buses and tourist buses",
             "category" : "UI/UX Design",
             "url" : "https://play.google.com/store/apps/details?id=com.csm.unicornmobile",
-            "img" : "img/unicornapp-porto.png"
+            "img" : "../src/img/unicornapp-porto.png"
         },
         {
             "portoId" : "porto005",
@@ -43,7 +43,7 @@
             "description" : "The mobile-based application for Unicorn Indorent's bus ticket booking agents is designed with a UI and UX tailored to facilitate Unicorn agents in booking tickets for prospective passengers. In this application, in addition to the ticket booking feature, there are also features such as bus tracking, passenger manifest data, and agent sales data.",
             "category" : "UI/UX Design",
             "url" : "https://play.google.com/store/apps/details?id=com.csm.unicornagent",
-            "img" : "img/unicornagent-porto.png"
+            "img" : "../src/img/unicornagent-porto.png"
         },
         {
             "portoId" : "porto006",
@@ -52,7 +52,7 @@
             "description" : "The mobile-based application is specifically designed for Unicorn Indorent's crew. This application is created with a UI and UX customized to facilitate the crew (bus cabin attendants) in catering to passenger needs before, during, and at the end of the journey. The application is equipped with features for the bus crew to view passenger manifest data, check-in and check-out passengers by scanning the QR code on the passenger's E-Ticket, manage meal services for passengers, and a feature to contact passengers or restaurant personnel.",
             "category" : "UI/UX Design",
             "url" : "https://play.google.com/store/apps/details?id=com.csm.unicorncrew",
-            "img" : "img/unicorncrew-porto.png"
+            "img" : "../src/img/unicorncrew-porto.png"
         },
         {
             "portoId" : "porto007",
@@ -61,7 +61,7 @@
             "description" : "The Company Profile Website of PT Harapan Mulia Perdana is a digital platform that contains detailed information about the company, services, and products of CSM Group Company",
             "category" : "UI/UX Design",
             "url" : "https://www.csmgroup.co.id/",
-            "img" : "img/csmgroup-porto.png"
+            "img" : "../src/img/csmgroup-porto.png"
         },
         {
             "portoId" : "porto008",
@@ -70,7 +70,7 @@
             "description" : "The Company Profile Website of PT Indomobil Bussan Trucking (INDOPENSKE) is a digital platform that contains detailed information about the company, services, and products of PT Indomobil Bussan Trucking (INDOPENSKE)",
             "category" : "UI/UX Design",
             "url" : "https://www.indopenske.co.id/",
-            "img" : "img/indopenske-porto.png"
+            "img" : "../src/img/indopenske-porto.png"
         },
         {
             "portoId" : "porto009",
@@ -79,7 +79,7 @@
             "description" : "The Company Profile Website of PT Indomobil Summit Logistics is a digital platform that contains detailed information about the company, services, and products of PT Indomobil Summit Logistics",
             "category" : "UI/UX Design",
             "url" : "https://www.csmgroup.co.id/Home/IndexISL",
-            "img" : "img/indologi-porto.png"
+            "img" : "../src/img/indologi-porto.png"
         },
         {
             "portoId" : "porto010",
@@ -88,7 +88,7 @@
             "description" : "The Company Profile Website of PT Solusi Indomobil Perkasa is a digital platform that contains detailed information about the company, services, and products of PT Solusi Indomobil Perkasa",
             "category" : "UI/UX Design",
             "url" : "https://www.csmgroup.co.id/Home/IndexISL",
-            "img" : "img/sipexpress-porto.png"
+            "img" : "../src/img/sipexpress-porto.png"
         },
         {
             "portoId" : "porto011",
@@ -97,7 +97,7 @@
             "description" : "The mobile-based application is specifically designed for SIP Express couriers to handle the delivery of goods or documents. This application is created with a UI and UX that can facilitate couriers in processing their delivery packages. The application is equipped with features such as confirmation of delivered items, updating the status of items by adding photo and recipient data.",
             "category" : "UI/UX Design",
             "url" : "https://play.google.com/store/apps/details?id=com.csm.expresspluskurir",
-            "img" : "img/expressplus-porto.png"
+            "img" : "../src/img/expressplus-porto.png"
         }
     ]
 }
