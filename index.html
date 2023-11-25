@@ -22,6 +22,8 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/src/img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
@@ -36,13 +38,15 @@
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
-    <div id="preloader">
-      <div id="loader"></div>
+    <div class="preloader">
+      <div id="loader">
+        <div id="shadow"></div>
+        <div id="box"></div>
+      </div>
     </div>
     <script>
-      /* script.js */
       window.addEventListener("load", function () {
-        const preloader = document.getElementById("preloader");
+        const preloader = document.getElementById("loader");
         preloader.style.display = "none";
       });
     </script>
@@ -268,13 +272,17 @@ const framework = [
                 }
               </style>
               <div class="row row-tab-all" id="card-all">
-                
+
               </div>
-            <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab">
-              <!--  -->
+          </div>
+          <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab">
+            <div class="row row-tab-all" id="card-design">
+
             </div>
-            <div class="tab-pane fade" id="webdev" role="tabpanel" aria-labelledby="webdev-tab">
-              <!--  -->
+          </div>
+          <div class="tab-pane fade" id="webdev" role="tabpanel" aria-labelledby="webdev-tab">
+            <div class="row row-tab-all" id="card-web">
+
             </div>
           </div>
           <script>
@@ -292,6 +300,7 @@ const framework = [
         
         </div>
       </div>
+    </div>
     </div>
     <!-- End Porto -->
 
@@ -364,7 +373,7 @@ const framework = [
     <button id="backToTopBtn" class="btn"><i class='bx bxs-chevrons-up text-blue bx-md bx-fade-up-hover'></i></button>
 
     <!-- Footer -->
-    <div id="render-footer"></div>
+    <footer class="footer" id="render-footer"></footer>
     <!-- End Footer -->
     
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

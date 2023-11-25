@@ -68,33 +68,91 @@ var jsonDataUrl = '../src/data/portofolios.json';
 
 // get json data all card category
 $.getJSON(jsonDataUrl, function (data) {
-    console.log('JSON data loaded successfully:', data);
+    // console.log('JSON data loaded successfully:', data);
         $.each(data.portofolios, function (_, porto) { 
-             var ParamsEncode = encodeParams({
+            var ParamsEncode = encodeParams({
                 portoId : porto.portoId
-             });
-             var cardAll = '<div class="col-md-6 d-flex justify-content-center">' +
-                '<div class="card card-bg-dark-blue rounded-4 text-center mb-3">' +
-                  '<img src="'+ porto.img +'" class="card-img-top porto-img img-fluid" alt="porto1">'+
-                  '<div class="card-body">'+
-                    '<h5 class="card-title text-blue fw-bold">'+ porto.name +'</h5>'+
-                    '<p class="card-text">'+ porto.title +'</p>'+
-                    '<a href="'+ porto.url +'" target="_blank" class="btn btn-second text-white"><i class="bx bx-link-alt"></i></a>'+
-                    '<a href="porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white">Detail</a>'+
-                  '</div>'+
-                '</div>'+
-              '</div>';
-    
-              $('#card-all').append(cardAll);
-            //  if (porto.category === 'Web Development') {
-            //     var cardWeb = '';
-            // } else if (porto.category === 'UI/UX Design') {
-            //     var cardDesign = '';
-            // } else {
-                
-            // }
+            });
+            if (porto.url === '#') {
+                var cardAll = '<div class="col-md-6 d-flex justify-content-center">' +
+                    '<div class="card card-bg-dark-blue rounded-4 text-center mb-3">' +
+                      '<img src="'+ porto.img +'" class="card-img-top porto-img img-fluid" alt="porto1">'+
+                      '<div class="card-body">'+
+                        '<h5 class="card-title text-blue fw-bold">'+ porto.name +'</h5>'+
+                        '<p class="card-text">'+ porto.title +'</p>'+
+                        '<a href="'+ porto.url +'"  onClick="'+ porto.event +'" class="btn btn-second text-white"><i class="bx bx-link-alt"></i></a>'+
+                        '<a href="pages/porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
+                      '</div>'+
+                    '</div>'+
+                  '</div>';
+            } else {
+                var cardAll = '<div class="col-md-6 d-flex justify-content-center">' +
+                    '<div class="card card-bg-dark-blue rounded-4 text-center mb-3">' +
+                      '<img src="'+ porto.img +'" class="card-img-top porto-img img-fluid" alt="porto1">'+
+                      '<div class="card-body">'+
+                        '<h5 class="card-title text-blue fw-bold">'+ porto.name +'</h5>'+
+                        '<p class="card-text">'+ porto.title +'</p>'+
+                        '<a href="'+ porto.url +'" target="_blank"  onClick="'+ porto.event +'" class="btn btn-second text-white"><i class="bx bx-link-alt"></i></a>'+
+                        '<a href="pages/porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
+                      '</div>'+
+                    '</div>'+
+                  '</div>';
+            }
+            $('#card-all').append(cardAll);
         });
-
-        
     }
 );
+
+// Filtered card category
+function getFilteredPortoByCategory(category, outputId) { 
+    $.getJSON(jsonDataUrl, function (data) {
+            $.each(data.portofolios, function (_, porto) {
+                 if (porto.category === category) {
+                    var ParamsEncode = encodeParams({
+                        portoId : porto.portoId
+                    });
+                    if (porto.url === '#') {
+                        var cardFilterd = '<div class="col-md-6 d-flex justify-content-center">' +
+                        '<div class="card card-bg-dark-blue rounded-4 text-center mb-3">' +
+                          '<img src="'+ porto.img +'" class="card-img-top porto-img img-fluid" alt="porto1">'+
+                          '<div class="card-body">'+
+                            '<h5 class="card-title text-blue fw-bold">'+ porto.name +'</h5>'+
+                            '<p class="card-text">'+ porto.title +'</p>'+
+                            '<a href="'+ porto.url +'" onClick="'+ porto.event +'" class="btn btn-second text-white"><i class="bx bx-link-alt"></i></a>'+
+                            '<a href="pages/porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
+                          '</div>'+
+                        '</div>'+
+                      '</div>';                        
+                    } else {
+                        var cardFilterd = '<div class="col-md-6 d-flex justify-content-center">' +
+                        '<div class="card card-bg-dark-blue rounded-4 text-center mb-3">' +
+                          '<img src="'+ porto.img +'" class="card-img-top porto-img img-fluid" alt="porto1">'+
+                          '<div class="card-body">'+
+                            '<h5 class="card-title text-blue fw-bold">'+ porto.name +'</h5>'+
+                            '<p class="card-text">'+ porto.title +'</p>'+
+                            '<a href="'+ porto.url +'" target="_blank" onClick="'+ porto.event +'" class="btn btn-second text-white"><i class="bx bx-link-alt"></i></a>'+
+                            '<a href="pages/porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
+                          '</div>'+
+                        '</div>'+
+                      '</div>';
+                    }
+                  $('#'+ outputId).append(cardFilterd);
+                 }
+            });
+        }
+    );
+ }
+
+ //alert function
+
+ function showAlert() {
+    Swal.fire({
+        title: "Oops",
+        text: "I apologize, but the application or website is currently undergoing internal maintenance within the company.",
+        icon: "warning",
+        confirmButtonText: `<i class='bx bx-check-double'></i> OK`
+    });
+ }
+
+ getFilteredPortoByCategory("Web Development", "card-web");
+ getFilteredPortoByCategory("UI/UX Design", "card-design");
