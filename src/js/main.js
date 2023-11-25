@@ -147,10 +147,13 @@ function getFilteredPortoByCategory(category, outputId) {
 
  function showAlert() {
     Swal.fire({
-        title: "Oops",
+        title: "Oops!",
         text: "I apologize, but the application or website is currently undergoing internal maintenance within the company.",
-        icon: "warning",
-        confirmButtonText: `<i class='bx bx-check-double'></i> OK`
+        imageUrl: "../src/img/monters.apng",
+        imageWidth: 200,
+        imageHeight: 200,
+        confirmButtonText: `<i class='bx bx-check-double'></i> OK`,
+        confirmButtonColor: "#0044ff",
     });
  }
 
