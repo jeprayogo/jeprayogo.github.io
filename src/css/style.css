@@ -321,6 +321,11 @@ body {
   background-color: #0044ff;
 }
 
+.custom-nav-item {
+  /* Your custom styles for nav-item */
+  font-size: 14px; /* Set the font size as an example */
+}
+
 #porto li button{
   text-transform: uppercase;
 }

@@ -29,6 +29,12 @@ $(document).ready(function () {
         if (windowWidth <= 768) {
             divId.hide();
             $('#about').addClass('mb-5');
+            $('#intro-tab').addClass('custom-nav-item');
+            $('#exp-tab').addClass('custom-nav-item');
+            $('#edu-tab').addClass('custom-nav-item');
+            $('#all-tab').addClass('custom-nav-item');
+            $('#design-tab').addClass('custom-nav-item');
+            $('#webdev-tab').addClass('custom-nav-item');
         } else {
             divId.show();
         }
@@ -56,7 +62,6 @@ $(document).ready(function () {
 });
 
 // Proccess JSON
-
 function encodeParams(params) { 
     return btoa(JSON.stringify(params));
 }

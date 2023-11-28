@@ -29,6 +29,8 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/src/img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
@@ -54,7 +56,56 @@
       });
     </script>
     <!-- Header -->
-    <div id="render-navbar"></div>
+    <script>
+      $(document).ready(function () {
+        const navbar = $(".navbar");
+  
+        $(window).scroll(function () {
+          if ($(window).scrollTop() > 50) {
+            navbar.removeClass("bg-transparent");
+            $(".navbar-toggler").css({
+              'color' : '#0c1938'
+            });
+          } else {
+            navbar.addClass("bg-transparent");
+            $(".navbar-toggler").css({
+              'color' : '#091125'
+            });
+          }
+          
+          $('.navbar-toggler').click(function() {
+            navbar.removeClass('bg-transparent');
+          });
+  
+        });
+  
+        
+  
+      });
+    </script>
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/"> Janny Eka Prayogo </a>
+      </div>
+      <script>
+        $(document).ready(function () {
+          $('a[data-scroll-to]').on('click', function (event) { 
+            event.preventDefault();
+            const targetId = $(this).data("scroll-to");
+            const targetSection = $(".container#" + targetId);
+  
+            if (targetSection.length) {
+              $("html, body").animate({
+                scrollTop: targetSection.offset().top,
+              }, 500);
+            }
+           });
+        });
+      </script>
+    </nav>
+  
     <!-- End Header -->
     <div class="container mt-5" data-aos="fade-down" data-aos-duration="2000">
         <div class="row flex-row g-5 py-5" id="porto-details">
@@ -77,8 +128,9 @@
       $.getJSON(jsonDataUrl, function(data) {
           // find porto by id
           var porto = data.portofolios.find(p => p.portoId === paramsDecode.portoId);
-          console.log(porto);
-          var portoDetails = '<div class="col-md-6">' +
+          console.log(porto.event);
+          if (porto.url === '#') {
+            var portoDetails = '<div class="col-md-6">' +
             '<img src="'+ porto.img +'" alt="" class="img-fluid porto-img" style="width: 100%;">' +
             '</div>' +
             '<div class="col-md-6">' +
@@ -86,9 +138,24 @@
                 '<div class="h3 fw-bold text-blue mb-3">'+ porto.title +'</div>' +
                 '<div class="h5 text-orange mb-3" id="category">'+ porto.category +'</div>' +
                 '</div>' +
-                '<p class="lead mb-3">'+ porto.description +'</p>' +
+                '<p class="lead fs-6">'+ porto.description +'</p>' +
+                '<a href="'+ porto.url +'" onClick="' + porto.event + '" class="btn btn-sm btn-blue mb-4"><i class="bx bx-link-external"></i> Visit</a>'+
                 '<div id="made-with"></div>' +
                 '</div>';
+          } else {
+            var portoDetails = '<div class="col-md-6">' +
+            '<img src="'+ porto.img +'" alt="" class="img-fluid porto-img" style="width: 100%;">' +
+            '</div>' +
+            '<div class="col-md-6">' +
+              '<div class="porto-title">' +
+                '<div class="h3 fw-bold text-blue mb-3">'+ porto.title +'</div>' +
+                '<div class="h5 text-orange mb-3" id="category">'+ porto.category +'</div>' +
+                '</div>' +
+                '<p class="lead fs-6">'+ porto.description +'</p>' +
+                '<a href="'+ porto.url +'" target="_blank" onClick="'+ porto.event +'" class="btn btn-sm btn-blue mb-4"><i class="bx bx-link-external"></i> Visit</a>'+
+                '<div id="made-with"></div>' +
+                '</div>';
+          }
           $('#porto-details').append(portoDetails);
         }
       );
