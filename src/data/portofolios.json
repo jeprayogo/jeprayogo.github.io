@@ -65,7 +65,7 @@
             "name" : "CSM Group Company Profile",
             "title" : "CSM Group Company Profile Web",
             "description" : "The Company Profile Website of PT Harapan Mulia Perdana is a digital platform that contains detailed information about the company, services, and products of CSM Group Company",
-            "category" : "UI/UX Design",
+            "category" : "Web Development",
             "url" : "https://www.csmgroup.co.id/",
             "img" : "../src/img/csmgroup-porto.png",
             "event": "javascript:void(0);"
@@ -85,7 +85,7 @@
             "name" : "INDOLOGI Company Profile",
             "title" : "INDOLOGI Company Profile Web",
             "description" : "The Company Profile Website of PT Indomobil Summit Logistics is a digital platform that contains detailed information about the company, services, and products of PT Indomobil Summit Logistics",
-            "category" : "UI/UX Design",
+            "category" : "Web Development",
             "url" : "https://www.csmgroup.co.id/Home/IndexISL",
             "img" : "../src/img/indologi-porto.png",
             "event": "javascript:void(0);"
@@ -95,8 +95,8 @@
             "name" : "SIP Express Company Profile",
             "title" : "SIP Express Company Profile Web",
             "description" : "The Company Profile Website of PT Solusi Indomobil Perkasa is a digital platform that contains detailed information about the company, services, and products of PT Solusi Indomobil Perkasa",
-            "category" : "UI/UX Design",
-            "url" : "https://www.csmgroup.co.id/Home/IndexISL",
+            "category" : "Web Development",
+            "url" : "https://sipexpress.co.id/",
             "img" : "../src/img/sipexpress-porto.png",
             "event": "javascript:void(0);"
         },

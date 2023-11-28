@@ -56,13 +56,62 @@
     <!-- Header -->
     <div id="render-navbar"></div>
     <!-- End Header -->
-    <div class="container" data-aos="fade-down" data-aos-duration="2000">
-        <div class="row">
-          
+    <div class="container mt-5" data-aos="fade-down" data-aos-duration="2000">
+        <div class="row flex-row g-5 py-5" id="porto-details">
+
         </div>
     </div>
+    <script>
+      function decodeParams(encodeParams) {
+        return JSON.parse(atob(encodeParams));
+      }
+
+      //retrieve parameters from urls
+      var urlParams = new URLSearchParams(window.location.search);
+      var encodeParams = urlParams.get('params');
+      var jsonDataUrl = '../src/data/portofolios.json';
+
+      //decode parameter
+      var paramsDecode = decodeParams(encodeParams);
+
+      $.getJSON(jsonDataUrl, function(data) {
+          // find porto by id
+          var porto = data.portofolios.find(p => p.portoId === paramsDecode.portoId);
+          console.log(porto);
+          var portoDetails = '<div class="col-md-6">' +
+            '<img src="'+ porto.img +'" alt="" class="img-fluid porto-img" style="width: 100%;">' +
+            '</div>' +
+            '<div class="col-md-6">' +
+              '<div class="porto-title">' +
+                '<div class="h3 fw-bold text-blue mb-3">'+ porto.title +'</div>' +
+                '<div class="h5 text-orange mb-3" id="category">'+ porto.category +'</div>' +
+                '</div>' +
+                '<p class="lead mb-3">'+ porto.description +'</p>' +
+                '<div id="made-with"></div>' +
+                '</div>';
+          $('#porto-details').append(portoDetails);
+        }
+      );
+
+      $(document).ready(function () {
+        var category = $('#category').text();
+
+        if (category === 'Web Development') {
+          var madeWithValue =  '<p class="text-blue fw-bold mb-2">Made With :</p>' +
+              '<i class="bx bxl-html5" style="font-size: 60px; color: #fff;" data-bs-toggle="tooltip" data-bs-title="HTML5"></i>' + 
+              '<i class="bx bxl-css3" style="font-size: 60px; color: #fff;" data-bs-toggle="tooltip" data-bs-title="CSS3"></i>' +
+              '<i class="bx bxl-javascript" style="font-size: 60px; color: #fff;" data-bs-toggle="tooltip" data-bs-title="Javascript"></i>' +
+              '<i class="bx bxl-jquery" style="font-size: 60px; color: #fff;" data-bs-toggle="tooltip" data-bs-title="JQuery"></i>' +
+              '<i class="bx bxl-bootstrap" style="font-size: 60px; color: #fff;" data-bs-toggle="tooltip" data-bs-title="Bootstrap"></i>';
+        } else {
+          var madeWithValue =  '<p class="text-blue fw-bold mb-2">Made With :</p>' +
+              '<i class="bx bxl-figma" style="font-size: 60px; color: #fff;" data-bs-toggle="tooltip" data-bs-title="Figma"></i>' ;
+        }
+        $('#made-with').append(madeWithValue);
+      });
+    </script>
     <!-- Footer -->
-    <div id="render-footer"></div>
+    <footer class="footer" id="render-footer"></footer>
     <!-- End Footer -->
     
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

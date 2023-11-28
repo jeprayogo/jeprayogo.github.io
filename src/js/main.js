@@ -1,3 +1,6 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 $(document).ready(function() {
     // Hide the preloader when the page is fully loaded
     $(window).on('load', function() {
@@ -81,7 +84,7 @@ $.getJSON(jsonDataUrl, function (data) {
                         '<h5 class="card-title text-blue fw-bold">'+ porto.name +'</h5>'+
                         '<p class="card-text">'+ porto.title +'</p>'+
                         '<a href="'+ porto.url +'"  onClick="'+ porto.event +'" class="btn btn-second text-white"><i class="bx bx-link-alt"></i></a>'+
-                        '<a href="pages/porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
+                        '<a href="porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
                       '</div>'+
                     '</div>'+
                   '</div>';
@@ -93,7 +96,7 @@ $.getJSON(jsonDataUrl, function (data) {
                         '<h5 class="card-title text-blue fw-bold">'+ porto.name +'</h5>'+
                         '<p class="card-text">'+ porto.title +'</p>'+
                         '<a href="'+ porto.url +'" target="_blank"  onClick="'+ porto.event +'" class="btn btn-second text-white"><i class="bx bx-link-alt"></i></a>'+
-                        '<a href="pages/porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
+                        '<a href="porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
                       '</div>'+
                     '</div>'+
                   '</div>';
@@ -119,7 +122,7 @@ function getFilteredPortoByCategory(category, outputId) {
                             '<h5 class="card-title text-blue fw-bold">'+ porto.name +'</h5>'+
                             '<p class="card-text">'+ porto.title +'</p>'+
                             '<a href="'+ porto.url +'" onClick="'+ porto.event +'" class="btn btn-second text-white"><i class="bx bx-link-alt"></i></a>'+
-                            '<a href="pages/porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
+                            '<a href="porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
                           '</div>'+
                         '</div>'+
                       '</div>';                        
@@ -131,7 +134,7 @@ function getFilteredPortoByCategory(category, outputId) {
                             '<h5 class="card-title text-blue fw-bold">'+ porto.name +'</h5>'+
                             '<p class="card-text">'+ porto.title +'</p>'+
                             '<a href="'+ porto.url +'" target="_blank" onClick="'+ porto.event +'" class="btn btn-second text-white"><i class="bx bx-link-alt"></i></a>'+
-                            '<a href="pages/porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
+                            '<a href="porto-details.html?params=' + encodeURIComponent(ParamsEncode) + '" class="btn btn-blue text-white ms-2">Detail</a>'+
                           '</div>'+
                         '</div>'+
                       '</div>';
