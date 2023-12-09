@@ -20,6 +20,44 @@ renderHtml('render-navbar', 'navbar')
 renderHtml('render-footer','footer');
 
 
+// set range waktu untuk menentukan jenis greeting
+$(document).ready(function () {
+
+  function isTimeInRange(startTime, endTime) { 
+    const currentTime = new Date();
+
+    const start = new Date();
+    const end = new Date();
+
+    //parse input in 24-hour format
+    const [startHour, startMinute] = startTime.split(":");
+    start.setHours(parseInt(startHour, 10));
+    start.setMinutes(parseInt(startMinute, 10));
+
+    const [endHour, endMinute] = endTime.split(":");
+    end.setHours(parseInt(endHour, 10));
+    end.setMinutes(parseInt(endMinute, 10));
+
+    if (startTime >= endTime) {
+      return currentTime >= start || currentTime <= end;
+    } else {
+      return currentTime >= start && currentTime <= end;
+    }
+   }
+
+   if (isTimeInRange("05:00","11:59")) {
+    var greeting = "Hello, Good Morning!";
+   } else if (isTimeInRange("12:00", "16:59")) {
+    var greeting = "Hello, Good Afternoon!";
+   } else if (isTimeInRange("17:00", "04:59")) {
+    var greeting = "Hello, Good Evening!";
+   } else {
+    var greeting = "Hello!";
+   }
+
+  $('#greet').text(greeting);
+});
+
 // Media Query
 $(document).ready(function () {
     function toggleVisibility() {
@@ -60,6 +98,9 @@ $(document).ready(function () {
         $('html, body').animate({scrollTop: 0}, 200); // Adjust the animation duration as needed
     });
 });
+
+
+// JS for Portofolios
 
 // Proccess JSON
 function encodeParams(params) { 
