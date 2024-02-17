@@ -12,6 +12,36 @@
         },
         {
             "portoId" : "porto002",
+            "name" : "Hikmat Nurani Landing Page",
+            "title" : "Hikmat Nurani Maid Agency Landing Page Web",
+            "description" : "The Landing Page Website of Hikmat Nurani is a digital platform that contains detailed information about the maid agency, services, and detail informations of Hikmat Nurani. This agency operates in the field of deploying domestic workers to Singapore.",
+            "category" : "Web Development",
+            "url" : "https://hikmatnurani.netlify.app",
+            "img" : "../src/img/hikmatnurani-porto.png",
+            "event": "javascript:void(0);"
+        },
+        {
+            "portoId" : "porto003",
+            "name" : "Zapple-Karangguni Landing Page",
+            "title" : "Zapple-Karangguni Services Landing Page Web",
+            "description" : "The Landing Page Website of Zapple-Karangguni is a digital platform that contains detailed information about the business, services, and Informations of Zapple-Karangguni. In Singapore, a 'karang guni' service refers to the traditional practice of door-to-door collection of recyclable or unwanted items by individuals known as 'karang guni men.' These individuals typically collect old newspapers, cardboard boxes, unwanted furniture, metal scraps, and other recyclable materials from residential areas.",
+            "category" : "Web Development",
+            "url" : "https://zapple-karangguni.netlify.app",
+            "img" : "../src/img/karangguni-porto.png",
+            "event": "javascript:void(0);"
+        },
+        {
+            "portoId" : "porto004",
+            "name" : "Paynowlah Landing Page",
+            "title" : "Paynowlah Financial Service Landing Page Web",
+            "description" : "The Landing Page Website of Paynowlah is a digital platform that contains detailed information about the business, services, and products of Paynowlah. This business operates in the field of payment collection automation, with a specific focus on the 'Outstanding Invoice Solution' service, and it has the tagline 'Discover an Automated Way to Get Paid'.",
+            "category" : "Web Development",
+            "url" : "https://paynowlah.netlify.app",
+            "img" : "../src/img/paynowlah-porto.png",
+            "event": "javascript:void(0);"
+        },
+        {
+            "portoId" : "porto005",
             "name" : "Indorent Company Profile",
             "title" : "PT CSM Corporatama (Indorent) Company Profile Web",
             "description" : "The Company Profile Website of PT CSM Corporata (Indorent) is a digital platform that contains detailed information about the company, services, and products of PT CSM Corporatama (Indorent)",
@@ -21,7 +51,7 @@
             "event": "javascript:void(0);"
         },
         {
-            "portoId" : "porto003",
+            "portoId" : "porto006",
             "name" : "Unicorn Indorent",
             "title" : "Unicorn Indorent Web App",
             "description" : "The web application 'Unicorn Indorent' is a digital platform for booking intercity bus tickets between Jakarta, Yogyakarta, Solo, and vice versa, owned by Unicorn Indorent and based on a web app. The company operates in the public transportation sector, providing services for intercity buses and tourist buses",
@@ -31,7 +61,7 @@
             "event": "javascript:void(0);"
         },
         {
-            "portoId" : "porto004",
+            "portoId" : "porto007",
             "name" : "Unicorn Indorent",
             "title" : "Unicorn Indorent Mobile App",
             "description" : "The Mobile application 'Unicorn Indorent' is a digital platform for booking intercity bus tickets between Jakarta, Yogyakarta, Solo, and vice versa, owned by Unicorn Indorent and based on a mobile app. The company operates in the public transportation sector, providing services for intercity buses and tourist buses",
@@ -41,7 +71,7 @@
             "event": "javascript:void(0);"
         },
         {
-            "portoId" : "porto005",
+            "portoId" : "porto008",
             "name" : "Unicorn Indorent Agent",
             "title" : "Unicorn Indorent Agent Mobile App",
             "description" : "The mobile-based application for Unicorn Indorent's bus ticket booking agents is designed with a UI and UX tailored to facilitate Unicorn agents in booking tickets for prospective passengers. In this application, in addition to the ticket booking feature, there are also features such as bus tracking, passenger manifest data, and agent sales data.",
@@ -51,7 +81,7 @@
             "event": "javascript:void(0);"
         },
         {
-            "portoId" : "porto006",
+            "portoId" : "porto009",
             "name" : "Unicorn Indorent Crew",
             "title" : "Unicorn Indorent Crew Mobile App",
             "description" : "The mobile-based application is specifically designed for Unicorn Indorent's crew. This application is created with a UI and UX customized to facilitate the crew (bus cabin attendants) in catering to passenger needs before, during, and at the end of the journey. The application is equipped with features for the bus crew to view passenger manifest data, check-in and check-out passengers by scanning the QR code on the passenger's E-Ticket, manage meal services for passengers, and a feature to contact passengers or restaurant personnel.",
@@ -61,7 +91,7 @@
             "event": "javascript:void(0);"
         },
         {
-            "portoId" : "porto007",
+            "portoId" : "porto010",
             "name" : "CSM Group Company Profile",
             "title" : "CSM Group Company Profile Web",
             "description" : "The Company Profile Website of PT Harapan Mulia Perdana is a digital platform that contains detailed information about the company, services, and products of CSM Group Company",
@@ -71,7 +101,7 @@
             "event": "javascript:void(0);"
         },
         {
-            "portoId" : "porto008",
+            "portoId" : "porto011",
             "name" : "INDOPENSKE Company Profile",
             "title" : "INDOPENSKE Company Profile Web",
             "description" : "The Company Profile Website of PT Indomobil Bussan Trucking (INDOPENSKE) is a digital platform that contains detailed information about the company, services, and products of PT Indomobil Bussan Trucking (INDOPENSKE)",
@@ -81,7 +111,7 @@
             "event": "javascript:void(0);"
         },
         {
-            "portoId" : "porto009",
+            "portoId" : "porto012",
             "name" : "INDOLOGI Company Profile",
             "title" : "INDOLOGI Company Profile Web",
             "description" : "The Company Profile Website of PT Indomobil Summit Logistics is a digital platform that contains detailed information about the company, services, and products of PT Indomobil Summit Logistics",
@@ -91,7 +121,7 @@
             "event": "javascript:void(0);"
         },
         {
-            "portoId" : "porto010",
+            "portoId" : "porto013",
             "name" : "SIP Express Company Profile",
             "title" : "SIP Express Company Profile Web",
             "description" : "The Company Profile Website of PT Solusi Indomobil Perkasa is a digital platform that contains detailed information about the company, services, and products of PT Solusi Indomobil Perkasa",
@@ -101,7 +131,7 @@
             "event": "javascript:void(0);"
         },
         {
-            "portoId" : "porto011",
+            "portoId" : "porto014",
             "name" : "Express Plus Kurir",
             "title" : "Express Plus Kurir Mobile App",
             "description" : "The mobile-based application is specifically designed for SIP Express couriers to handle the delivery of goods or documents. This application is created with a UI and UX that can facilitate couriers in processing their delivery packages. The application is equipped with features such as confirmation of delivered items, updating the status of items by adding photo and recipient data.",
@@ -111,7 +141,7 @@
             "event": "javascript:void(0);"
         },
         {
-            "portoId" : "porto012",
+            "portoId" : "porto015",
             "name" : "Elite Car Rental Web",
             "title" : "Elite Car Rental Web App",
             "description" : "The 'Elite Car Rental' web application is a digital platform for booking rental cars from the car rental business line INDORENT. This application features car reservation options based on selected categories, a payment gateway, a point system for discounts, and a car rental system for airport pick-up and drop-off.",
@@ -121,7 +151,7 @@
             "event": "showAlert()"
         },
         {
-            "portoId" : "porto013",
+            "portoId" : "porto016",
             "name" : "Elite Car Rental Mobile",
             "title" : "Elite Car Rental Mobile App",
             "description" : "The 'Elite Car Rental' mobile-based application is a digital platform for booking rental cars from the car rental business line INDORENT. This application features car reservation options based on selected categories, a payment gateway, a point system for discounts, and a car rental system for airport pick-up and drop-off.",
